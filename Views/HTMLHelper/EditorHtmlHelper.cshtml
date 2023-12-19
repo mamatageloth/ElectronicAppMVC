@@ -1,0 +1,77 @@
+﻿@model ElectronicsAppMVC.Models.Employee
+@{
+    ViewData["Title"] = "EditorHtmlHelper";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>EditorHtmlHelper</h1>
+<form>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.employeeId, new { @class = "control-label" })
+                @Html.EditorFor(model => model.employeeId, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.employeeFName, new { @class = "control-label" })
+                @Html.EditorFor(model => model.employeeFName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.employeeLName, new { @class = "control-label" })
+                @Html.EditorFor(model => model.employeeLName, new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.employeeEmail, new { @class = "control-label" })
+                @Html.EditorFor(model => model.employeeEmail, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.employeeAddress, new { @class = "control-label" })
+                @Html.EditorFor(model => model.employeeAddress, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.employeepassword, new { @class = "control-label" })
+                @Html.EditorFor(model => model.employeepassword, new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Technology, new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.Technology, new SelectList(Enum.GetValues(typeof(Technology))), new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Department, new { @class = "control-label" })
+                @Html.ListBoxFor(model => model.Department, new SelectList(Enum.GetValues(typeof(Department))), new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Save" />               
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">                
+                <input type="reset" class="btn btn-danger" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+

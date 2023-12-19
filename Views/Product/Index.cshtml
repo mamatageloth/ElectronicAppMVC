@@ -1,0 +1,32 @@
+﻿@*add model class reference*@
+@model IEnumerable<ElectronicsAppMVC.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .imgcls {
+        height:100px;
+        width:100px;
+    }
+</style>
+<h1>Index</h1>
+<table class="table table-bordered table-striped table-warning">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Image</th>
+    </tr>
+    @foreach(var data in Model) {
+    <tr>
+        <td>@data.ProductId</td>
+        <td>@data.Name</td>
+        <td>@data.Quantity</td>
+        <td>@data.Price</td>
+        <td><img src="~/images/@data.Image" class="imgcls"/></td>
+    </tr>
+    }
+</table>
+

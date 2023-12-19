@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "viewDataTest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a asp-controller="StateMangement" asp-action="Index">View Data</a>
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron bg-warning">
+            <h1>@ViewData["CompanyName"]</h1>
+            <h1><span class="text-success">Contact Us at :</span> @ViewData["CompanyContact"]</h1>
+        </div>
+    </div>   
+</div>

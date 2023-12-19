@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ElectronicsAppMVC.Models.Student>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Student Details</h1>
+<table class="table table-bordered table-striped table-warning">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Id)</th>
+        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+        <th>@Html.DisplayNameFor(model => model.Email)</th>
+        <th>@Html.DisplayNameFor(model => model.Mobile)</th>
+        <th>@Html.DisplayNameFor(model => model.Address)</th>
+        <th>@Html.DisplayNameFor(model => model.Image)</th>
+    </tr>
+    @foreach (var data in Model)
+    {
+<tr>
+    <td>@Html.DisplayFor(model => data.Id)</td>
+    <td>@Html.DisplayFor(model => data.FirstName)</td>
+    <td>@Html.DisplayFor(model => data.LastName)</td>
+    <td>@Html.DisplayFor(model => data.Email)</td>
+    <td>@Html.DisplayFor(model => data.Mobile)</td>
+    <td>@Html.DisplayFor(model => data.Address)</td>
+    <td><img src="~/Student/@Html.DisplayFor(model=>data.Image)"/></td>
+</tr>
+    }
+</table>
+

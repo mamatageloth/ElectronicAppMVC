@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "RazorSyntax";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>RazorSyntax</h1>
+@*inline expression*@
+<h1>@DateTime.Now.ToString()</h1>
+@*multistatment block*@
+@{ 
+    //supplier details
+    var supplierid = 101;
+    var supplierName = "Mr. Amit";
+    var commission = 2.5f;
+    var contact = 98562;
+    var email = "amit@ck.com";
+    var isDefaulter = 'N';
+}
+<div class="bg-primary">
+    <ul>
+        <li>@supplierid</li>
+        <li>@supplierName</li>
+        <li>@commission</li>
+        <li>@contact</li>
+        <li>@email</li>
+        <li>@isDefaulter</li>
+    </ul>
+</div>
+
+

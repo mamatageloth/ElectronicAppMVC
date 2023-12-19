@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>View Data</h1>
+<div>
+    <span>Welcome : @TempData["username1"]</span>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron bg-warning">
+            <h1>@ViewData["CompanyName"]</h1>
+            <h1><span class="text-success">Contact Us at :</span> @ViewData["CompanyContact"]</h1>
+        </div>
+    </div>
+</div>
+<h1>View Bag</h1>
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron bg-warning">
+            <h1>@ViewBag.CompanyName</h1>
+            <h1><span class="text-success">Contact Us at :</span> @ViewBag.CompanyContact</h1>
+        </div>
+    </div>
+</div>
+

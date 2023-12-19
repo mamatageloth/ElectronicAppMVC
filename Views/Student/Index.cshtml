@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ElectronicsAppMVC.Models.Student>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .inputcls {
+        border: none;
+        border-bottom: 1px solid green;
+    }
+
+        .inputcls:focus {
+            outline: none;
+        }
+</style>
+<h1>Student Details</h1>
+<table class="table table-bordered table-striped table-warning">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Id)</th>
+        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+        <th>@Html.DisplayNameFor(model => model.Email)</th>
+        <th>@Html.DisplayNameFor(model => model.Mobile)</th>
+        <th>@Html.DisplayNameFor(model => model.Address)</th>
+    </tr>
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => data.Id)</td>
+            <td>@Html.DisplayFor(model => data.FirstName)</td>
+            <td>@Html.DisplayFor(model => data.LastName)</td>
+            <td>@Html.DisplayFor(model => data.Email)</td>
+            <td>@Html.DisplayFor(model => data.Mobile)</td>
+            <td>@Html.DisplayFor(model => data.Address)</td>
+        </tr>
+    }
+</table>
+<i class="fa fa-user" aria-hidden="true"></i>
+<input type="text" id="name" name="name" class="inputcls" />
+

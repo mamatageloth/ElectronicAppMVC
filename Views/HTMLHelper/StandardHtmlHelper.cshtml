@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "BasicHtmlBS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    //list object of ienumerable
+    IEnumerable<string> experience = new List<string>
+    {
+        "0-fresher","1-3","3-above"
+    };
+}
+
+<h1>Standard Html Helper</h1>
+@*employee- employeeid,firstname,lastname
+    email,contact,dob,gender,technology,experience
+    submit(btn),reset(btn)*@
+<div class="form-group">
+    @Html.Label("employeeid","EmployeeId", new { @class="control-label"})
+    @Html.TextBox("employeeid", "", new { @class="form-control" })
+</div>
+<div class="form-group">
+    @Html.Label("firstname", "First Name", new { @class="control-label"})
+    @Html.TextBox("firstname", "", new { @class="form-control"})
+</div>
+<div class="form-group">
+    @Html.Label("lastname", "Last Name", new { @class = "control-label" })
+    @Html.TextBox("lastname", "", new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.Label("password", "Password", new { @class = "control-label" })
+    @Html.Password("password", "", new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.Label("email", "Email", new { @class = "control-label" })
+    @Html.TextBox("email", "", new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.Label("contact", "Contact", new { @class = "control-label" })
+    @Html.TextBox("contact", "", new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.Label("dob", "Date Of Birth", new { @class = "control-label" })
+    @Html.TextBox("dob", "", new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.Label("gender", "Gender", new { @class = "control-label" })
+    @Html.RadioButton("gender", "M", new { @id = "rdbmale" }) Male
+    @Html.RadioButton("gender", "F", new { @id = "rdbfemale" }) FeMale
+</div>
+<div class="form-group">
+    @Html.Label("address", "Address", new { @class="control-label"})
+    @Html.TextArea("address", "", new { @class="form-control"})
+</div>
+<div class="form-group">
+    <label class="control-label">Technology</label>
+    @Html.CheckBox("html", true) HTML
+    @Html.CheckBox("css") CSS
+    @Html.CheckBox("js") Javascript
+</div>
+
+<div class="form-group">
+    @Html.Label("experience" ,"Experience", new { @class="control-label"})
+    @Html.DropDownList("expression",new SelectList(experience),new { @class="form-control"})
+</div>
+<div class="form-group">
+    @Html.Label("experience", "Experience-List", new { @class = "control-label" })
+    @Html.ListBox("expression", new SelectList(experience), new { @class = "form-control" })
+</div>
+<hr/>
+<div class="form-group">
+    @Html.Label("experience", "Experience", new { @class = "control-label" })
+    @Html.DropDownList("expression",
+    new List<SelectListItem> {
+    new SelectListItem{Text="0-fresher",Value="1" },
+    new SelectListItem{ Text="1-3",Value="2"},
+    new SelectListItem{ Text="3-above",Value="3"} }, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.Label("experience", "Experience-List", new { @class = "control-label" })
+    @Html.ListBox("expression",
+    new List<SelectListItem> {
+    new SelectListItem{Text="0-fresher",Value="1" },
+    new SelectListItem{ Text="1-3",Value="2"},
+    new SelectListItem{ Text="3-above",Value="3"} }, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <input type="submit" value="Save" name="save" />
+    <input type="reset" value="Reset" name="reset" />
+
+</div>
+
+

@@ -1,0 +1,32 @@
+﻿@model ElectronicsAppMVC.Models.User
+@{
+    ViewData["Title"] = "viewBagTest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron bg-warning">
+            <h1>@ViewBag.CompanyName</h1>
+            <h1><span class="text-success">Contact Us at :</span> @ViewBag.CompanyContact</h1>
+        </div>
+    </div>
+</div>
+<hr/>
+<form asp-action="viewBagTest">
+    <div>
+        <span class="text-danger">@ViewBag.errormessage</span>
+    </div>
+    <label class="control-label" asp-for="username"></label>
+    <input type="text" asp-for="username" />
+    <label class="control-label" asp-for="passward"></label>
+    <input type="text" asp-for="passward"/>
+    <input type="submit" name="login" value="login" class="btn btn-success"/>
+</form>
+<form asp-action="reset">
+    <input type="reset" name="reset" value="reset"/>
+</form>
+<div class="jumbotron bg-info">
+    <h1>@ViewBag.username</h1>
+    <h1>@ViewBag.password</h1>
+</div>

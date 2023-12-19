@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewData["Title"] = "HTMLBootstrapGrid";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>HTMLBootstrapGrid</h1>
+<style>
+    .maindiv {
+        border: 1px solid orange;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #586a7a29;
+    }
+</style>
+
+<h1>HTML BOOTSTRAP GRID LAYOUT SAMPLE</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple HTML Registraion Page Design </title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="control-label" for="l1">First Name</label>
+                <input class="form-control" type="text" id="txt1" name="fname" />
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="from-group">
+                <label class="control-label" for="l2">Middle Name</label>
+                <input class="form-control" type="text" id="txt2" name="fname" />
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="from-group">
+                <label class="control-label" for="l3">Last Name</label>
+                <input class="form-control" type="text" id="txt3" name="fname" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="from-group">
+                <label class="control-label" for="l4">Gender</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="from-group">
+                <input type="radio" id="rad1" value="M" name="rad" />Male
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="from-group">
+                <input type="radio" id="rad2" value="F" name="rad" />Female
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l6">Address</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <input class="form-control" type="text" id="txt4" name="fname" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l7">PinCode</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <input class="form-control" type="number" id="txt5" name="fname" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l8">City</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <input class="form-control" type="text" id="txt6" name="fname" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l9">State</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <input class="form-control" type="text" id="txt7" name="fname" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l10">Mobile Numer</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <input class="form-control" maxlength="10" type="number" id="txt8" name="fname" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l5">Email</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <input class="form-control" type="email" id="txt9" name="fname" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l5">D.O.B</label>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <input class="form-control" type="date" id="txt10" name="fname" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l5">Experties</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <input type="checkbox" id="chk1" name="HTML" />HTML
+                        <input type="checkbox" id="chk2" name="CSS" />CSS
+                        <input type="checkbox" id="chk3" name="C#" />C#
+                        <input type="checkbox" id="chk4" name="JAVA" />JAVA
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="from-group">
+                        <label class="control-label" for="l6">Experience</label>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="from-group">
+                        <select class="form-control">
+                            <option value="1">Fresher</option>
+                            <option value="2">0-1</option>
+                            <option value="3">1-3</option>
+                            <option value="4">3-Above</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="from-group">
+                        <input type="button" class="btn-success" id="bttn1" value="Submit" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="from-group">
+                        <input type="button" class="btn-danger" id="bttn2" value="Reset" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            
+            <table class="table">
+                <tr>
+                    <th>name</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+
